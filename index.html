@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Final</title>
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+      <script>
+
+
+
+        $(document).ready(function(){
+          $("h1").click(function(){
+            var search = prompt("Search");
+              if(search.indexOf(search) >= 0){
+                console.log("nothing");
+              }else{
+                console.log("search Google images and Twitter images to display");
+                $("h2").html(search);
+                response.push(search);
+              }
+
+
+          $("h3").click(function(){
+            console.log("reset all");
+          })
+
+
+          var api = {};
+            api.key = "";
+            api.conditions = "https://www.googleapis.com/customsearch/v1?q=dogs&searchType=image&key=AIzaSyDhNsZhsTlnX9dVwkkrDyPQweOR0pTvC3Y";
+            console.log(api);
+
+
+          $.ajax({
+            type: 'GET',
+            dataType: 'json',
+            url: api.conditions,
+            success: function(response){
+            }
+          });
+
+        })
+      })
+
+
+
+      </script>
+      <style>
+        body{
+
+        }
+        h1{
+
+        }
+        h2{
+
+        }
+      </style>
+    </head>
+
+    <body>
+      <h1>Search</h1>
+      <h2></h2>
+      <div id = "google"></div>
+      <div id = "twitter"></div>
+      <h3>clear</h3>
+    </body>
+  </html>
