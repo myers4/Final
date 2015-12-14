@@ -10,8 +10,8 @@
 
         $(document).ready(function(){
           $("h1").click(function(){
-            var searchTerm = prompt("Search");
-              if(searchTerm.indexOf(search) >= 0){
+            var search = prompt("Search");
+              if(search.indexOf(search) >= 0){
                 console.log("nothing");
               }else{
                 console.log("search Google images and Twitter images to display");
@@ -27,7 +27,7 @@
 
           var api = {};
             api.key = "";
-            var searchTerm = prompt("search");
+            var searchTerm = prompt("What are you searching for?");
             api.conditions = "http://cooper-union-google-proxy.herokuapp.com/search?q="+ searchTerm;
 
             console.log(api);
