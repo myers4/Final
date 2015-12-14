@@ -27,16 +27,8 @@
 
           var api = {};
             api.key = "";
-            api.conditions = (function() {
-    var cx = '006334747563351354031:ssqavkadw-0';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+            var searchTerm = prompt("What are you searching for?");
+            api.conditions = "http://cooper-union-google-proxy.herokuapp.com/search?q="+ searchTerm;
 
             console.log(api);
 
@@ -55,7 +47,7 @@
 
 
       </script>
-      
+
 <gcse:search></gcse:search>
 
       <style>
