@@ -10,7 +10,7 @@
 
         $(document).ready(function(){
           $("h1").click(function(){
-            var search = prompt("Search");
+            var searchTerm = prompt("Search");
               if(search.indexOf(search) >= 0){
                 console.log("nothing");
               }else{
@@ -27,7 +27,6 @@
 
           var api = {};
             api.key = "";
-            var searchTerm = prompt("What are you searching for?");
             api.conditions = "http://cooper-union-google-proxy.herokuapp.com/search?q="+ searchTerm;
 
             console.log(api);
