@@ -6,7 +6,11 @@
       <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
       <script>
 
+      var api = {};
+        api.key = "";
+        api.conditions = "http://cooper-union-google-proxy.herokuapp.com/search?q="+ searchTerm;
 
+        console.log(api);
 
         $(document).ready(function(){
           $("h1").click(function(){
@@ -24,12 +28,7 @@
             console.log("reset all");
           })
 
-          var api = {};
-            api.key = "";
-            
-            api.conditions = "http://cooper-union-google-proxy.herokuapp.com/search?q="+ searchTerm;
 
-            console.log(api);
 
 
           $.ajax({
