@@ -9,10 +9,7 @@
       var api = {};
         api.key = "";
         api.conditions = "http://cooper-union-google-proxy.herokuapp.com/search?q="+ searchTerm;
-
-        console.log(api);
-
-        $(document).ready(function(){
+        var searchTerm = $(document).ready(function(){
           $("h1").click(function(){
             var searchTerm = prompt("search");
               if(search.indexOf(search) >= 0){
@@ -22,6 +19,9 @@
                 $("h2").html(search);
                 response.push(search);
               }
+
+
+
 
 
           $("h3").click(function(){
