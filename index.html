@@ -8,7 +8,6 @@
 
       var api = {};
         api.key = "";
-        var searchTerm = prompt("search");
         api.conditions = "http://cooper-union-google-proxy.herokuapp.com/search?q="+ searchTerm;
         var searchTerm = $(document).ready(function(){
           $("h1").click(function(){
@@ -17,8 +16,8 @@
                 console.log("nothing");
               }else{
                 console.log("search Google images and Twitter images to display");
-                $("h2").html(search);
-                response.push(search);
+                $("h2").html(searchTerm);
+                response.push(searchTerm);
               }
 
 
